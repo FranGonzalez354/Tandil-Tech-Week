@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#28ad1d">
+  <meta name="description" content="Tandil Tech Week. Un encuentro para construir lo que viene. Hacking Day y Startup Day, 14 y 15 de octubre en Tandil.">
+  <title>Tandil Tech Week — 14 & 15 OCT</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/barlow-condensed-800.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script>try { document.documentElement.dataset.theme = localStorage.getItem('ttw-theme') || 'light'; } catch {}</script>
+  <script defer src="assets/vendor/gsap.min.js"></script>
+  <script defer src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script defer src="app.js"></script>
+  <script type="importmap">{"imports":{"three":"./assets/vendor/three/three.module.min.js"}}</script>
+  <script type="module" src="laptop-transition.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Tandil Tech Week, inicio">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M2 30 14 9l6 10 6-10 12 21H2Z" fill="none" stroke="currentColor" stroke-width="4"/><path d="m14 30 6-11 6 11" fill="none" stroke="currentColor" stroke-width="4"/></svg>
+      <span>Tandil<br>Tech Week<span class="brand-dot">.</span></span>
+    </a>
+    <nav aria-label="Navegación principal">
+      <a class="nav-link" href="#eventos">Los eventos</a>
+      <a class="nav-link" href="#comunidad">La comunidad</a>
+    </nav>
+    <div class="header-actions">
+      <button class="theme-toggle icon-button" aria-label="Activar modo oscuro" aria-pressed="false">
+        <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.7 13.2A8.8 8.8 0 0 1 10.8 3.3a8.8 8.8 0 1 0 9.9 9.9Z"/></svg>
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+      </button>
+      <a class="button button-small" href="#inscripcion">Quiero estar <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+    </div>
+    <div class="scroll-progress" aria-hidden="true"></div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+    <div id="home-page">
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="hero-topline"><span>Tecnología que nos encuentra.</span><span>Tandil, Buenos Aires <span class="location-dot" aria-hidden="true"></span></span></div>
+        <div class="hero-composition">
+          <h1 id="hero-title"><span class="hero-line-one">Tandil</span><span class="hero-line-two">Tech Week<span class="title-period">.</span></span></h1>
+          <div class="hero-date"><span>14 & 15</span><strong>OCT</strong><span class="date-caption">Dos días.<br>Todo por construir.</span></div>
+          <svg class="hill-lines" viewBox="0 0 280 170" fill="none" aria-hidden="true"><path d="M5 160 87 18Q98 0 109 19l38 66 25-43q9-15 18 0l85 118H5Z"/><path d="M28 150 89 44q9-16 18 0l40 69 28-46q7-13 15 0l60 83H28Z"/><path d="m53 140 39-67q6-10 12 0l43 73 31-51q4-7 9 0l33 45H53Z"/><path d="m79 130 16-27q3-6 7 0l16 27H79Z"/></svg>
+        </div>
+        <div class="hero-bottom">
+          <p>Un encuentro para<br>construir lo que viene.</p>
+          <div class="hero-bottom-right"><span>Ideas, personas<br>y nuevas conexiones.</span><a class="scroll-cue" href="#proximos" aria-label="Descubrir próximos eventos"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a></div>
+        </div>
+      </section>
+
+      <section class="upcoming section-pad" id="proximos" aria-labelledby="upcoming-title">
+        <div class="upcoming-copy">
+          <p class="section-intro"><span class="live-dot" aria-hidden="true"></span> Próximos eventos</p>
+          <h2 id="upcoming-title">Hackaton<br>y Startup Day.</h2>
+          <p class="section-description">La tecnología es el punto de partida.<br>Lo que sigue, lo construimos juntos.</p>
+          <div class="upcoming-agenda">
+            <a href="#eventos"><span class="agenda-date">14<span>octubre</span></span><span><strong>Hacking Day</strong><small>Campus Universitario UNICEN</small></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+            <a href="#eventos"><span class="agenda-date">15<span>octubre</span></span><span><strong>Startup Day</strong><small>Distrito Avellaneda</small></span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+          </div>
+          <a class="text-link" href="#eventos">Encontrá tu próximo encuentro <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="video-column">
+          <div class="video-note"><span>Nos vemos en Tandil.</span><svg viewBox="0 0 80 55" aria-hidden="true"><path d="M2 5q59-15 60 37M48 31l14 13 13-14"/></svg></div>
+          <div class="portrait-video">
+            <video id="week-video" src="tandil_tech_week.mp4" poster="assets/tech-week-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Presentación de Tandil Tech Week"></video>
+            <div class="video-controls"><button class="video-play icon-button" aria-label="Pausar video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12"/></svg></button><button class="video-sound" aria-pressed="false">Activar sonido <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m11 5-6 4H2v6h3l6 4V5Zm5 4 5 6m0-6-5 6"/></svg></button></div>
+          </div>
+          <span class="video-caption">Una ciudad. Muchas ideas. Un mismo lugar.</span>
+        </div>
+      </section>
+
+      <section class="sponsors" id="comunidad" aria-labelledby="sponsor-title">
+        <div class="sponsors-heading"><h2 id="sponsor-title">Los que lo hacen posible.</h2><button id="sponsor-pause" class="subtle-button" aria-pressed="false">Pausar movimiento <span aria-hidden="true">Ⅱ</span></button></div>
+        <div class="sponsor-window"><div class="sponsor-track">
+          <ul class="sponsor-set" aria-label="Sponsors">
+            <li class="sponsor geonosis"><a href="https://geonosisgroup.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar Geonosis"><svg class="sponsor-logo" viewBox="20 30 830 265" aria-hidden="true"><use href="assets/sponsors/geonosis.svg#logo"/></svg></a></li>
+            <li class="sponsor rotonda"><a href="https://gruporotonda.com.ar" target="_blank" rel="noopener noreferrer" aria-label="Visitar Grupo Rotonda"><svg class="sponsor-logo" viewBox="15 50 450 225" aria-hidden="true"><use href="assets/sponsors/rotonda.svg#logo"/></svg></a></li>
+            <li class="sponsor fardo"><a href="https://heyfardo.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar Fardo"><svg class="sponsor-logo" viewBox="16 24 263 89" aria-hidden="true"><use href="assets/sponsors/fardo.svg#logo"/></svg></a></li>
+            <li class="sponsor payoneer"><a href="https://www.payoneer.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar Payoneer"><svg class="sponsor-logo" viewBox="28 140 532 116" aria-hidden="true"><use href="assets/sponsors/payoneer.svg#logo"/></svg></a></li>
+            <li class="sponsor red-guild"><a href="https://theredguild.org" target="_blank" rel="noopener noreferrer" aria-label="Visitar The Red Guild"><svg class="sponsor-logo" viewBox="52 50 762 340" aria-hidden="true"><use href="assets/sponsors/red-guild.svg#logo"/></svg></a></li>
+            <li class="sponsor tdl"><a href="https://tandil2050.com" target="_blank" rel="noopener noreferrer" aria-label="Visitar Tandil 2050"><svg class="sponsor-logo" viewBox="68 32 505 350" aria-hidden="true"><use href="assets/sponsors/tdl.svg#logo"/></svg></a></li>
+            <li class="sponsor novum"><a href="https://novumfarmacias.com.ar" target="_blank" rel="noopener noreferrer" aria-label="Visitar Novum Farmacias">novum<small>Farmacias</small></a></li>
+            <li class="sponsor bakken"><svg class="sponsor-logo" viewBox="38 4 405 107" role="img" aria-label="Bakken"><use href="assets/sponsors/bakken.svg#logo"/></svg></li>
+          </ul>
+        </div></div>
+      </section>
+
+      <section class="events-section" id="eventos" aria-labelledby="events-title">
+        <div class="events-heading"><h2 id="events-title">Dos formas de ser parte.</h2><p>Elegí tu evento. Hacé que pase.</p></div>
+        <div class="event-panels">
+          <button class="event-panel hacking-panel" data-event="hacking" aria-haspopup="dialog">
+            <img class="event-poster" src="assets/hacking-poster.jpg" alt="Presentación de Hacking Day en Tandil" loading="lazy">
+            <video id="hacking-video" src="video_tandil_hackaton_14oct.mp4" poster="assets/hacking-poster.jpg" muted loop playsinline preload="metadata" aria-hidden="true"></video>
+            <span class="event-shade"></span>
+            <span class="event-meta"><span>14 octubre</span><span>Ciberseguridad</span></span>
+            <span class="event-main"><span class="event-venue">Campus Universitario UNICEN</span><span class="event-title">Hacking<br>Day<span>.</span></span><span class="event-description">Juntá a tus amigos y vení a divertirte aprendiendo de ciberseguridad.</span></span>
+            <span class="event-bottom"><span>Explorá el evento</span><span class="event-arrow" aria-hidden="true">↗</span></span>
+          </button>
+          <button class="event-panel startup-panel" data-event="startup" aria-haspopup="dialog">
+            <img class="event-poster" src="distrito_avellaneda.jpg" alt="Encuentro de la comunidad en Distrito Avellaneda" loading="lazy">
+            <span class="event-shade"></span>
+            <span class="event-meta"><span>15 octubre</span><span>Ideas que crecen</span></span>
+            <span class="event-main"><span class="event-venue">Distrito Avellaneda</span><span class="event-title">Startup<br>Day<span>.</span></span><span class="event-description">Vení a conocer a los que hacen. Charlas y conexiones para tu próxima idea.</span></span>
+            <span class="event-bottom"><span>Explorá el evento</span><span class="event-arrow" aria-hidden="true">↗</span></span>
+          </button>
+        </div>
+      </section>
+
+      <section class="speakers-section" id="speakers" aria-labelledby="speakers-title" aria-roledescription="carrusel">
+        <div class="speakers-heading">
+          <div><h2 id="speakers-title">Speakers y colaboradores.</h2><p>Conocé a quienes comparten sus ideas y experiencias.</p></div>
+          <div class="speakers-controls" role="group" aria-label="Controles del carrusel">
+            <button class="speaker-arrow" id="speakers-prev" type="button" aria-label="Ver colaboradores anteriores" aria-controls="speakers-track" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4m6-6-6 6 6 6"/></svg></button>
+            <button class="speaker-arrow" id="speakers-next" type="button" aria-label="Ver siguientes colaboradores" aria-controls="speakers-track"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></button>
+          </div>
+        </div>
+        <ul class="speakers-track" id="speakers-track" tabindex="0" aria-label="Speakers y colaboradores" aria-describedby="speakers-hint">
+          <li class="speaker-slide"><img src="assets/speakers/belen-gonzalez.webp" alt="Retrato de Belén González" width="720" height="683" loading="lazy" decoding="async"><h3>Belén González</h3><p>CMO en Paisanos</p></li>
+          <li class="speaker-slide"><img src="assets/speakers/gonzalo-fernandez.webp" alt="Retrato de Gonzalo Fernández" width="720" height="683" loading="lazy" decoding="async"><h3>Gonzalo Fernández</h3><p>Co-Founder en Relaw</p></li>
+          <li class="speaker-slide"><img src="assets/speakers/lucas-janon.webp" alt="Retrato de Lucas Janon" width="720" height="683" loading="lazy" decoding="async"><h3>Lucas Janon</h3><p>Co-Founder & CEO en pulso.health</p></li>
+          <li class="speaker-slide"><img src="assets/speakers/malena-martin.webp" alt="Retrato de Malena Martin" width="720" height="683" loading="lazy" decoding="async"><h3>Malena Martin</h3><p>Founder & CEO en Fardo</p></li>
+          <li class="speaker-slide"><img src="assets/speakers/rodrigo-rotonda.webp" alt="Retrato de Rodrigo Rotonda" width="720" height="683" loading="lazy" decoding="async"><h3>Rodrigo Rotonda</h3><p>Director General en Rotonda</p></li>
+          <li class="speaker-slide"><img src="assets/speakers/juan-ignacio-caballero.webp" alt="Retrato de Juan Ignacio Caballero" width="720" height="683" loading="lazy" decoding="async"><h3>Juan Ignacio Caballero</h3><p>Partnerships Manager en Payoneer</p></li>
+          <li class="speaker-slide"><img src="assets/speakers/federico-ades.webp" alt="Retrato de Federico Ades" width="720" height="683" loading="lazy" decoding="async"><h3>Federico Ades</h3><p>Founder en Picante</p></li>
+          <li class="speaker-slide"><img src="assets/speakers/nicolas-seguro.webp" alt="Retrato de Nicolás Seguro" width="720" height="683" loading="lazy" decoding="async"><h3>Nicolás Seguro</h3><p>Founder & CAIO en Fardo</p></li>
+          <li class="speaker-slide"><img src="assets/speakers/renzo-battaglia.webp" alt="Retrato de Renzo Battaglia" width="720" height="683" loading="lazy" decoding="async"><h3>Renzo Battaglia</h3><p>Co-Founder & CMO en Viatik</p></li>
+        </ul>
+        <div class="speakers-footer"><p id="speakers-hint">Deslizá para conocerlos. También podés usar las flechas del teclado.</p><p id="speakers-status" role="status" aria-live="polite" aria-atomic="true"></p></div>
+      </section>
+
+      <section class="join-section section-pad" aria-labelledby="join-title"><div><p>Las buenas conexiones empiezan en persona.</p><h2 id="join-title">El próximo paso<br>lo das vos.</h2></div><a class="button join-button" href="#inscripcion">Quiero ser parte <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></section>
+    </div>
+
+    <div id="registration-page" hidden>
+      <a class="back-link" href="#eventos"><span aria-hidden="true">←</span> Volver a los eventos</a>
+      <section id="connection-game" aria-labelledby="game-title">
+        <div class="game-heading"><span class="server-status"><span></span> Servidor desconectado</span><h1 id="game-title" tabindex="-1">Se cayó el servidor<span>.</span></h1><p>Levantá el servidor para seguir con la inscripción.</p><p class="game-instructions">Arrastrá cada cable a un puerto libre. También podés seleccionar un cable y después un puerto.</p></div>
+        <div class="game-stage" id="game-stage">
+          <div class="network-switch"><div class="switch-top"><span class="switch-brand">TTW <span>Network switch</span></span><span class="power-label"><span class="power-led"></span> Power</span></div><div class="switch-ports" role="group" aria-label="Puertos disponibles"></div><div class="switch-bottom"><span>Ethernet / 6 puertos</span><span id="connection-count">0 de 4 conexiones</span></div></div>
+          <svg id="cable-svg" aria-hidden="true"></svg>
+          <div class="cables" role="group" aria-label="Cables para conectar"></div>
+          <span class="cable-source" data-cable="0"></span><span class="cable-source" data-cable="1"></span><span class="cable-source" data-cable="2"></span><span class="cable-source" data-cable="3"></span>
+          <div class="game-hint" id="game-hint">Un cable. Una conexión. Ya estás más cerca.</div>
+        </div>
+        <p id="game-announcement" class="game-announcement" aria-live="polite" role="status">Conectá los cuatro cables para entrar.</p>
+      </section>
+
+      <section id="registration-form-section" hidden aria-labelledby="form-title">
+        <div class="registration-intro"><span class="server-status connected"><span></span> Estamos conectados</span><h1 id="form-title" tabindex="-1">Ahora sí.<br>Nos vemos ahí<span>.</span></h1><p>Elegí tu encuentro y dejá tus datos.</p><div class="registration-dates"><span>14 & 15 OCT</span><span>Tandil, Buenos Aires</span></div></div>
+        <form id="registration-form">
+          <h2>Tu inscripción</h2>
+          <fieldset><legend>¿A qué evento venís?</legend><label class="event-option"><input type="checkbox" name="event" value="hacking"><span><strong>Hacking Day</strong><small>14 octubre · Campus UNICEN</small></span></label><label class="event-option"><input type="checkbox" name="event" value="startup"><span><strong>Startup Day</strong><small>15 octubre · Distrito Avellaneda</small></span></label></fieldset>
+          <label class="form-label" for="full-name">Nombre y apellido</label><input id="full-name" name="name" autocomplete="name" placeholder="Tu nombre completo" required maxlength="120">
+          <label class="form-label" for="email">Correo electrónico</label><input id="email" name="email" type="email" autocomplete="email" placeholder="vos@ejemplo.com" required maxlength="254">
+          <label class="form-label" for="organization">Universidad o empresa <span>(opcional)</span></label><input id="organization" name="organization" autocomplete="organization" placeholder="¿De dónde venís?" maxlength="160">
+          <p class="form-notice">Formulario de demostración: tus datos se guardan en este navegador; no se envían a los organizadores.</p>
+          <p id="form-error" class="form-error" role="alert"></p>
+          <button type="submit" class="button form-submit">Guardar inscripción <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></button>
+        </form>
+        <div id="registration-success" hidden role="status"><span class="success-symbol" aria-hidden="true">✓</span><h2>Datos guardados.</h2><p>Tu solicitud quedó guardada en este navegador. Esta demo no confirma una plaza en los eventos.</p><button class="button" id="new-registration">Nueva inscripción</button><button class="text-link" id="edit-registration">Editar mis datos</button><a class="text-link" href="#inicio">Volver al inicio</a></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer"><a class="brand" href="#inicio"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M2 30 14 9l6 10 6-10 12 21H2Z" fill="none" stroke="currentColor" stroke-width="4"/><path d="m14 30 6-11 6 11" fill="none" stroke="currentColor" stroke-width="4"/></svg><span>Tandil<br>Tech Week.</span></a><p>Hecho de ideas.<br>Hecho en Tandil.</p><nav class="social-links" aria-label="Redes sociales"><a href="https://www.instagram.com/tandiltechweek/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></svg>Instagram</a><a href="https://x.com/tandiltechweek" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4 3 12 18h4L8 3H4Zm0 18 6.5-8M20 3l-6.5 8"/></svg>X</a></nav><span>14 & 15 octubre</span><a href="#inicio" aria-label="Volver arriba" class="footer-up">↑</a></footer>
+
+  <dialog id="event-dialog" aria-labelledby="dialog-title"><button class="dialog-close icon-button" aria-label="Cerrar información del evento">×</button><div class="dialog-media"></div><div class="dialog-content"><p class="dialog-date"></p><h2 id="dialog-title"></h2><p class="dialog-description"></p><dl><div><dt>Dónde</dt><dd class="dialog-location"></dd></div></dl><a class="dialog-map text-link" target="_blank" rel="noopener noreferrer">Ver ubicación en el mapa <span aria-hidden="true">↗</span></a><a class="button dialog-register" href="#inscripcion">Inscribirme a este evento <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div></dialog>
+  <noscript><div class="noscript-message">Activá JavaScript para explorar los eventos y usar el formulario de inscripción.</div></noscript>
+</body>
+</html>
